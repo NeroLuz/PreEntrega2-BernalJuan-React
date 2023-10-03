@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(6, 133, 19);
+    font-family: 'Indie Flower', cursive;
+}
+
+#logo-empresa{
+    display: flex;
+}
+
+#logo-empresa img{
+    width: 50px;
+    margin-top:15px;
+    margin-left: 20px;
+}
+
+#logo-empresa p{
+    margin-left: 10px;
+    margin-top: 20px;
+    font-size: 30px;
+    color: #fff;
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li{
+    margin: 20px;
+    margin-top: 25px;
+    font-size: 20px;
+}
+
+nav ul li a{
+    color: #fff; 
+    text-decoration: none;   
+}
+
+nav ul li a:hover{
+    text-decoration: underline;
+}

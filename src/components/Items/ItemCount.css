@@ -1,0 +1,35 @@
+#botonera-counter{
+    display: flex;
+    height: 30px;
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+#botonera-counter span{
+    text-align: center;
+    line-height: 27px;
+    width: 120px;
+    border: rgb(36, 109, 24) solid 2px;
+    background-color: rgb(129, 208, 129);
+}
+
+#boton-sumar, #boton-restar{
+    line-height: 10px;
+    background-color: rgb(129, 208, 129);
+    color: #000;
+    border-radius: 5px;
+    border: solid 2px rgb(36, 109, 24);
+    font-size: 20px;
+    width: 20px;
+    height: 30px;
+}
+
+#boton-sumar{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+#boton-restar{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}

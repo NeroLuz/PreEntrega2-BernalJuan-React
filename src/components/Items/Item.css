@@ -1,0 +1,52 @@
+.card-container{
+    border: 3px solid #000;
+    background-color: rgb(89, 206, 105);
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    padding: 5px;
+    width: 300px;
+}
+
+.card-container img {
+    width: 285px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.card-body h4{
+    text-align: center;
+    margin-top: 5px;
+}
+
+.card-body p{
+    text-align: center;
+}
+
+.card-body .precio{
+    font-size: 17px;
+}
+
+.card-footer{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#card-button{
+    margin-left: 95px;
+    margin-bottom: 10px;
+    padding: 8px;
+    background-color: rgb(21, 137, 52);
+    border-radius: 5px;
+    border: solid 2px rgb(36, 109, 24);
+}
+
+#card-button:hover{
+    scale: 1.025;
+}
+
+#card-button a{
+    color: #fff;
+    text-decoration: none;
+}
