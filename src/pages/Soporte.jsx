@@ -1,5 +1,4 @@
 import React from 'react'
-import ItemDetailContainer from '../components/Detail/ItemDetailContainer'
 import "./Soporte.css"
 
 const Soporte = () => {

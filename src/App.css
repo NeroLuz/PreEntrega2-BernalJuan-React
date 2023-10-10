@@ -1,22 +1,5 @@
 #root{
     max-width: 1536px;
-}
-
-.loader4{
-    grid-column: 2 / 3;
+    min-height: 1000px;
     background-color: #fff;
-    margin-left: 50%;
-    margin-top: 250px;
-    width: 100px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    border: 8px solid;
-    border-color: #000 #0000;
-    animation: load4 1s infinite;
-}
-
-@keyframes load4 {
-    to{
-        transform: rotate(.5turn);
-    }
 }

@@ -12,7 +12,26 @@
     margin-left: 120px;
 }
 
-.flex-container{
+.grid-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+}
+
+.loader4{
+    grid-column: 2 / 3;
+    background-color: #fff;
+    margin-left: 200px;
+    margin-top: 250px;
+    width: 100px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 8px solid;
+    border-color: #000 #0000;
+    animation: load4 1s infinite;
+}
+
+@keyframes load4 {
+    to{
+        transform: rotate(.5turn);
+    }
 }

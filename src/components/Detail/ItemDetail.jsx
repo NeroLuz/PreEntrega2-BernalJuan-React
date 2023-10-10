@@ -3,22 +3,15 @@ import ItemCount from '../Items/ItemCount'
 import "./ItemDetail.css"
 
 const ItemDetail = ({item}) => {
-
-  const {default_image} = item
-  
-
   return (
     <div className="detail-container">
       <div className="image-container">
-        {
-          default_image !== undefined &&
-          <img src={default_image.original_url} alt="Foto de la planta"/>
-        }
+          <img src={item.image} alt="Foto del producto"/>
       </div>
       <div className="text-container">
-        <h2>Acerca de {item.common_name}</h2>
+        <h2>Acerca de {item.title}</h2>
         <p>{item.description}</p>
-        <p>Precio: $<b>2500</b></p>
+        <p>Precio: $<b>{item.price}</b></p>
         <div className="botonera">
           <ItemCount/>
           <button id="button-add">Agregar al carrito</button>
@@ -29,16 +22,3 @@ const ItemDetail = ({item}) => {
 }
 
 export default ItemDetail
-
-{/* <div className="flip-card">
-    <div className="flip-card-inner">
-        <div className="flip-card-back">
-            <h4>Acerca de {item.common_name}</h4>
-            <p>{item.description}</p>
-            <div className="botonera-detail">
-              <ItemCount/>
-              <button id="button-add">Agregar al carrito</button>
-            </div>
-        </div>
-    </div>
-</div> */}

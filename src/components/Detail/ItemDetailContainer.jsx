@@ -10,7 +10,7 @@ const ItemDetailContainer = ({id}) => {
   const [loader, setLoader] = useState(false)
 
   const getData = () => {
-    fetch(`https://perenual.com/api/species/details/${id}?key=sk-p6o0651098edc023b2267`)
+    fetch(`https://fakestoreapi.com/products/${id}`)
       .then((rta) => rta.json())
       .then((data) => setItem(data))
       .catch((error) => console.log(error))
@@ -19,9 +19,9 @@ const ItemDetailContainer = ({id}) => {
   useEffect(() => {
     setLoader(true)
     setTimeout(() => {
-      getData()
       setLoader(false)
     }, 2000)
+    getData()
   }, [])
 
   return (

@@ -6,9 +6,9 @@ const Inicio = () => {
   return (
     <div>
       <div className="greeting-container">
-        <h2>Bienvenido a Nerito´s Vivero</h2>
+        <h2>Bienvenido a Nerito´s Shop</h2>
       </div>
-      <div className="flex-container">
+      <div className="grid-container">
         <ItemListContainer/>
       </div>
     </div>

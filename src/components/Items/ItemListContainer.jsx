@@ -5,29 +5,35 @@ import withLoading from '../../hoc/withLoading'
 import ItemList from './ItemList'
 
 const ItemListHoc = withLoading(ItemList)
-const ItemListContainer = () => {
+const ItemListContainer = ({category}) => {
 
   const [data, setData] = useState([])
+  const [filteredData, setFilteredData] = useState([])
   const [loader, setLoader] = useState(false)
 
   const getData = () => {
-    fetch("https://perenual.com/api/species-list?key=sk-p6o0651098edc023b2267&page=10")
-    .then((rta) => rta.json())
-    .then((data) => setData(data.data))
+    fetch("https://fakestoreapi.com/products?limit=18")
+    .then((response) => response.json())
+    .then((data) => {
+      setData(data)
+      const filteredData = category ? data.filter(item => item.category === category) : data
+      setFilteredData(filteredData)
+    })
     .catch((error) => console.log(error))
+
   }
 
   useEffect(() => {
     setLoader(true)
+    getData()
     setTimeout(() => {
-      getData()
       setLoader(false)
     }, 2000)
-  }, [])
+  }, [category])
 
   return (
       <>
-        <ItemListHoc items={data} isLoading={loader}/>
+        <ItemListHoc items={filteredData} isLoading={loader}/>
       </>
   )
 }
